@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+In this project, let's build a **Match Game** by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<br/>
+PROJECT URL : https://mymatchgame007.ccbp.tech/
+<br/>
 
-### `npm start`
+### Design Files
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<details>
+<summary>Click to view</summary>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/match-game-sm-outputs.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Match Game](https://assets.ccbp.in/frontend/content/react-js/match-game-lg-output.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png)
 
-### `npm test`
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Set Up Instructions
 
-### `npm run build`
+<details>
+<summary>Click to view</summary>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
+</details>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Completion Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+<summary>Functionality to be added</summary>
+<br/>
 
-### `npm run eject`
+The app must have the following functionalities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Initially,
+  - Score should be `0` and time should be `60` sec
+  - The image to be matched should have the src attribute value as the value of the key `imageUrl` from the first object in **imagesList** provided
+  - The **Fruits** tab should be active and the thumbnails with **FRUIT** as their category should be displayed
+- The timer should start running backwards from the `60` sec
+- When a tab is clicked, then the thumbnails in the corresponding category should be displayed
+- When a thumbnail is clicked, if that is matched with the image to be matched,
+  - Score is incremented by one
+  - The new image to be matched should be generated randomly among the value of the key `imageUrl` from **imagesList** provided
+- When a thumbnail is clicked, if it is not matched with the image to be matched,
+  - The game should end, and the [Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png) view should be displayed
+  - When **PLAY AGAIN** button is clicked, then we should be able to play the game again
+    - The score and time values should be reset to `0` and `60` sec respectively
+    - The image to be matched should reset to the value of the key `imageUrl` from the first object in **imagesList** provided
+    - The active tab should reset to **Fruits**, and the thumbnails with **FRUIT** as their category should be displayed
+- When the timer reached `0` sec, then the game should end, and the [Scorecard](https://assets.ccbp.in/frontend/content/react-js/match-game-score-card-lg-output.png) view should be displayed
+- The App is provided with `tabsList`. It consists of a list of tabItem objects with the following properties in each tabItem object
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  |     Key     | Data Type |
+  | :---------: | :-------: |
+  |    tabId    |  String   |
+  | displayText |  String   |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- The App is provided with `imagesList`. It consists of a list of imageItem objects with the following properties in each imageItem object
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  |     Key      | Data Type |
+  | :----------: | :-------: |
+  |      id      |  String   |
+  |   imageUrl   |  String   |
+  | thumbnailUrl |  String   |
+  |   category   |  String   |
 
-## Learn More
+</details>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Important Note
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<details>
+<summary>Click to view</summary>
 
-### Code Splitting
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**The following instructions are required for the tests to pass**
 
-### Analyzing the Bundle Size
+- The image to be matched in the app should have the alt as **match**
+- The thumbnail images in the app should have the alt as **thumbnail**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+</details>
 
-### Making a Progressive Web App
+### Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<details>
+<summary>Image URLs</summary>
 
-### Advanced Configuration
+- [https://assets.ccbp.in/frontend/react-js/match-game-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-bg.png)
+- [https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-score-card-lg-bg.png)
+- [https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png](https://assets.ccbp.in/frontend/react-js/match-game-score-card-sm-bg.png)
+- [https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png](https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png) alt should be **website logo**
+- [https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png](https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png) alt should be **timer**
+- [https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png](https://assets.ccbp.in/frontend/react-js/match-game-play-again-img.png) alt should be **reset**
+- [https://assets.ccbp.in/frontend/react-js/match-game-trophy.png](https://assets.ccbp.in/frontend/react-js/match-game-trophy.png) alt should be **trophy**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+</details>
 
-### Deployment
+<details>
+<summary>Colors</summary>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br/>
 
-### `npm run build` fails to minify
+<div style="background-color:#2c0e3a; width: 150px; padding: 10px; color: white">Hex: #2c0e3a</div>
+<div style="background-color:#ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color:#fec653; width: 150px; padding: 10px; color: black">Hex: #fec653</div>
+<div style="background-color:#cf60c8; width: 150px; padding: 10px; color: black">Hex: #cf60c8</div>
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<details>
+<summary>Font-families</summary>
+
+- Roboto
+
+</details>
